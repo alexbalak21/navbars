@@ -39,7 +39,7 @@ nav ul li:hover > ul {
     display: flex;
 }
 
-nav .menu-icon {
+nav #menu-icon {
     height: 30px;
     margin: 15px;
     display: none;
@@ -49,7 +49,18 @@ nav .menu-icon {
     nav ul {
         display: none;
     }
-    nav .menu-icon {
+    nav #menu-icon {
         display: block;
     }
+}
+
+nav ul.open {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+nav ul.open li a {
+    width: 100vw;
+    text-align: center;
 }

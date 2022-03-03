@@ -28,7 +28,6 @@ nav ul {
 }
 
 nav ul li {
-    /* position: relative; */
     list-style: none;
     display: inline-block;
 }
@@ -60,7 +59,7 @@ nav ul li:hover > ul {
 nav ul ul li {
     width: 150px;
     float: none;
-    display: list-item;
+    /* display: list-item; */
     position: relative;
 }
 
@@ -68,4 +67,22 @@ nav ul ul ul li {
     position: relative;
     top: -60px;
     left: 150px;
+}
+
+.navbar-toggle {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    nav ul {
+        /* display: none; */
+        float: none;
+    }
+
+    nav ul li {
+        display: inline;
+    }
+    .navbar-toggle {
+        display: block;
+    }
 }

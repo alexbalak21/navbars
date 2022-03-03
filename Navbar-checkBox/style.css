@@ -1,46 +1,51 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 nav {
-  overflow: hidden;
-  background: dodgerblue;
-  text-align: right;
-  color: white;
+    overflow: hidden;
+    background: dodgerblue;
+    text-align: right;
+    color: white;
+}
+
+nav .brand {
+    height: 60px;
+    float: left;
 }
 
 nav ul {
-  list-style: none;
-  background: dodgerblue;
+    list-style: none;
+    background: dodgerblue;
 }
 
 nav ul li {
-  float: left;
-  padding: 20px;
+    float: right;
+    padding: 20px;
 }
 
 nav input {
-  display: none;
+    display: none;
 }
 
 nav #navIcon {
-  display: none;
-  font-size: 36px;
-  padding: 16px;
+    display: none;
+    font-size: 36px;
+    padding: 16px;
 }
 
 @media screen and (max-width: 800px) {
-  nav #navIcon {
-    display: block;
-  }
-  nav li {
-    display: none;
-  }
-  input:checked ~ ul li {
-    float: none;
-    display: block;
-    text-align: center;
-  }
+    nav #navIcon {
+        display: block;
+    }
+    nav li {
+        display: none;
+    }
+    input:checked ~ ul li {
+        float: none;
+        display: block;
+        text-align: center;
+    }
 }
