@@ -26,8 +26,8 @@ body {
     gap: var(--hamburger-gap);
     width: max-content;
     position: absolute;
-    top: var(--hamburger-margin);
-    right: var(--hamburger-margin);
+    top: 0;
+    right: 0;
     z-index: 2;
     cursor: pointer;
 }

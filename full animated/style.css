@@ -6,14 +6,48 @@
 }
 
 :root {
-    --bar-width: 60px;
+    --bar-width: 48px;
     --bar-height: 8px;
     --hamburger-gap: 6px;
     --foreground: #333;
     --background: white;
-    --hamburger-margin: 8px;
+    --hamburger-margin: 10px;
     --animation-timing: 200ms ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+}
+
+/* .hamburger-menu.hamburger-menu:has(input:checked) {
+    --foreground: var(--background);
+} */
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+    content: "";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: var(--foreground);
+    border-radius: 9999px;
+    transform-origin: right center;
+    transition: opacity var(--animation-timing), width var(--animation-timing),
+        rotate var(--animation-timing), transate var(--animation-timing);
+}
+
+.hamburger-menu:has(input:checked)::before {
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / -2);
+}
+
+.hamburger-menu:has(input:checked)::after {
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / 2);
+}
+
+.hamburger-menu input:checked {
+    opacity: 0;
+    width: 0;
 }
 
 body {
@@ -85,24 +119,28 @@ nav ul li:hover > ul {
     display: initial;
 }
 
-#nav-toggle {
-    display: none;
-}
-
-header label {
-    font-size: 18px;
-    color: black;
-    cursor: pointer;
-    display: none;
-    font-size: 32px;
-    padding: 20px;
-    margin: 0 30px;
-}
-
 @media (max-width: 1200px) {
-    header label {
-        display: block;
+    .hamburger-menu input {
+        appearance: none;
+        padding: 0;
+        margin: 0;
+        outline: none;
+        pointer-events: none;
     }
+
+    .hamburger-menu {
+        --x-width: calc((var(--hamburger-height) * 1.41421356237));
+        display: flex;
+        flex-direction: column;
+        gap: var(--hamburger-gap);
+        width: max-content;
+        position: absolute;
+        top: var(--hamburger-margin);
+        right: var(--hamburger-margin);
+        z-index: 2;
+        cursor: pointer;
+    }
+
     nav {
         position: absolute;
         top: 100%;
@@ -141,7 +179,7 @@ header label {
         background-color: darkgrey;
     }
 
-    #nav-toggle:checked ~ nav {
+    .hamburger-menu:has(input:checked) ~ nav {
         display: initial;
     }
 }
