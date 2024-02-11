@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/6502c70df0.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
     <title>Navbar Responsive whith Dropdown</title>
 </head>
 
@@ -19,13 +20,13 @@
             <ul>
                 <li><a href="">LINK</a></li>
                 <li>
-                    <a href="">
+                    <a>
                         LINK
                         <i class="fa-solid fa-caret-down"></i>
                     </a>
                     <ul>
-                        <li>
-                            <a href="">
+                        <li class="">
+                            <a>
                                 DOWN
                                 <i class="fa-solid fa-caret-right"></i>
                             </a>
@@ -34,8 +35,8 @@
                                 <li><a href="">LINK2</a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="">
+                        <li class="">
+                            <a>
                                 DWON
                                 <i class="fa-solid fa-caret-right"></i>
                             </a>
@@ -47,7 +48,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="">
+                    <a>
                         LINK
                         <i class="fa-solid fa-caret-down"></i>
                     </a>

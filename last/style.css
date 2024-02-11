@@ -70,7 +70,15 @@ nav ul li ul li ul {
     top: 0;
 }
 
-nav ul li:hover > ul {
+/* nav ul li:hover > ul {
+    display: initial;
+} */
+
+nav ul li.open > ul {
+    display: initial;
+}
+
+nav ul li.subopen > ul {
     display: initial;
 }
 
