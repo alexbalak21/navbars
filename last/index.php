@@ -12,10 +12,10 @@
 </head>
 
 <body>
-    <header>
+    <div class="navigation">
         <a class="logo" href=""><img src="logo.png" /></a>
         <input type="checkbox" id="nav-toggle" />
-        <label for="nav-toggle"><i id="nav-bars" class="fa-solid fa-bars"></i></label>
+        <label class="navbars" for="nav-toggle"><i id="nav-bars" class="fa-solid fa-bars"></i></label>
         <nav>
             <ul>
                 <li><a href="">LINK</a></li>
@@ -59,7 +59,7 @@
                 <li><a href="">LINK</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
 </body>
 
 </html>
