@@ -18,3 +18,7 @@ body {
     top: 59px;
     border: 1px solid green;
 }
+.after {
+    border: 1px solid red;
+    position: inherit;
+}

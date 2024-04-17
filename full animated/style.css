@@ -82,11 +82,12 @@ nav ul {
 nav ul li {
     position: relative;
     float: left;
+    height: 80px;
 }
 
 nav ul li a {
     font-size: 18px;
-    padding: 20px 0;
+    margin: 20px 0;
     width: 160px;
     text-align: center;
     text-decoration: none;
@@ -101,6 +102,7 @@ nav ul li a:hover {
 
 nav ul li ul {
     position: absolute;
+    top: 80px;
     left: 0;
     background: var(--nav-background);
     display: none;
@@ -171,6 +173,7 @@ nav ul li:hover > ul {
     nav ul li ul {
         position: relative;
         width: 100%;
+        top: 0;
     }
 
     nav ul li ul li {
@@ -185,6 +188,7 @@ nav ul li:hover > ul {
         width: 100%;
         left: 0;
         top: 0;
+        position: relative;
     }
 
     nav ul li ul li ul li {
