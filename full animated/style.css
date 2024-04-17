@@ -6,13 +6,13 @@
 }
 
 :root {
-    --nav-background: #232142;
-    --nav-hover: #272547;
+    --nav-background: WhiteSmoke;
+    --nav-hover: #c8c8c8;
     --bar-width: 48px;
     --bar-height: 8px;
     --hamburger-gap: 6px;
     --foreground: #333;
-    --background: white;
+    --background: #333;
     --hamburger-margin: 10px;
     --animation-timing: 200ms ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
@@ -96,7 +96,7 @@ nav ul li a {
 
 nav ul li a:hover {
     background: var(--nav-hover);
-    color: white;
+    color: var(--background);
 }
 
 nav ul li ul {
@@ -130,8 +130,7 @@ nav ul li:hover > ul {
         background-color: var(--foreground);
         border-radius: 9999px;
         transform-origin: right center;
-        transition: opacity var(--animation-timing),
-            width var(--animation-timing), rotate var(--animation-timing),
+        transition: opacity var(--animation-timing), width var(--animation-timing), rotate var(--animation-timing),
             transate var(--animation-timing);
     }
     .hamburger-menu {
