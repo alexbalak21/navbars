@@ -4,7 +4,7 @@ function open_dropdown(li, chevron) {
     else chevron.classList.replace("fa-minus", "fa-caret-down")
 }
 
-const lis = document.querySelectorAll("li")
+const lis = document.querySelectorAll("header nav ul li")
 lis.forEach((li) => {
     if (li.querySelector("ul")) {
         const dropdown_activator = document.createElement("span")

@@ -139,6 +139,7 @@ nav ul li ul li ul {
     text-align: center;
     margin-top: 1rem;
     border: 1px solid silver;
+    border-radius: 6px;
 }
 nav ul li.open > ul {
     display: initial;
