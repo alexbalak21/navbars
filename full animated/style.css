@@ -16,6 +16,11 @@
     --hamburger-margin: 10px;
     --animation-timing: 200ms ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+    --hover-color: #4167b1;
+}
+
+body {
+    font-size: 16px;
 }
 
 .hamburger-menu {
@@ -82,12 +87,10 @@ nav ul {
 nav ul li {
     position: relative;
     float: left;
-    height: 80px;
 }
 
 nav ul li a {
-    font-size: 18px;
-    margin: 20px 0;
+    margin: 1rem 0;
     width: 160px;
     text-align: center;
     text-decoration: none;
@@ -95,22 +98,29 @@ nav ul li a {
     color: var(--foreground);
 }
 
+.logo {
+    padding: 0;
+}
+
 nav ul li a:hover {
-    background: var(--nav-hover);
-    color: var(--background);
+    color: var(--hover-color);
 }
 
 nav ul li ul {
     position: absolute;
-    top: 80px;
     left: 0;
     background: var(--nav-background);
     display: none;
+    top: calc(1rem * 3.4375);
 }
 
 nav ul li ul li {
     width: 100%;
-    border-top: 1px solid grey;
+    border-top: 1px solid silver;
+}
+
+nav ul li ul li:last-child {
+    border-bottom: 1px solid silver;
 }
 
 nav ul li ul li ul {
@@ -118,7 +128,14 @@ nav ul li ul li ul {
     top: -1px;
 }
 
-nav ul li:hover > ul {
+.dropdown-activator {
+    display: block;
+    float: right;
+    padding: 0.3rem 0.4rem;
+    border: 1px solid silver;
+    margin-top: calc(-1rem * 2.6);
+}
+nav ul li.open > ul {
     display: initial;
 }
 
@@ -160,10 +177,11 @@ nav ul li:hover > ul {
     nav ul li {
         width: 100%;
     }
-    .dropdown {
-        float: right;
+    .dropdown-activator {
         border: 1px solid silver;
-        padding: 16px 0;
+        padding: 1rem 1.25rem;
+        margin-top: calc(-1rem * 3.2);
+        cursor: pointer;
     }
 
     nav ul li a {
@@ -177,7 +195,7 @@ nav ul li:hover > ul {
     }
 
     nav ul li ul li {
-        background-color: lightgray;
+        background-color: #e8e8e8;
     }
 
     nav ul li ul li i {

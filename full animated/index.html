@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css" />
         <script src="https://kit.fontawesome.com/6502c70df0.js" crossorigin="anonymous"></script>
+        <script src="script.js" defer></script>
         <title>Navbar Responsive whith Dropdown</title>
     </head>
     <body>
@@ -15,24 +16,20 @@
             <nav>
                 <ul>
                     <li><a href="">LINK</a></li>
-                    <li>
-                        <a href="">
-                            MENU
-                            <sapn class="dropdown"><i class="fa-solid fa-plus"></i></sapn>
-                        </a>
-
+                    <li class="dropdown">
+                        <a href="">MENU</a>
+                        <sapn class="dropdown-activator"><i class="fa-solid fa-caret-down"></i></sapn>
                         <ul>
                             <li><a href="">DROP 1</a></li>
                             <li><a href="">DROP 2</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="">
-                            MENU
-                            <i class="fa-solid fa-caret-down"></i>
-                        </a>
+                    <li class="dropdown">
+                        <a href="">MENU</a>
+                        <sapn class="dropdown-activator"><i class="fa-solid fa-caret-down"></i></sapn>
                         <ul>
                             <li><a href="">DROP 1</a></li>
+                            <li><a href="">DROP 2</a></li>
                         </ul>
                     </li>
                     <li><a href="">LINK</a></li>
