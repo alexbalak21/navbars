@@ -17,5 +17,3 @@ lis.forEach((li) => {
         dropdown_activator.addEventListener("click", () => open_dropdown(li, chevron))
     }
 })
-
-console.log()
