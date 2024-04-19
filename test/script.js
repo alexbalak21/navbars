@@ -1,6 +1,9 @@
 function turn_red() {
-    this.classList.toggle("red")
+    this.style.color = "red"
 }
 
-const item = document.querySelector("h1")
-item.addEventListener("click", turn_red)
+function chage() {
+    if (this.innerText == "▼") this.innerHTML = "&#8722;"
+    else this.innerHTML = "&#x25bc;"
+    console.log(this.innerHTML)
+}

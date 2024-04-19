@@ -1,4 +1,5 @@
 function open_dropdown(li, chevron) {
+    if (window.innerWidth > 1200) return
     li.classList.toggle("open")
     if (chevron.classList.contains("fa-caret-down")) chevron.classList.replace("fa-caret-down", "fa-minus")
     else chevron.classList.replace("fa-minus", "fa-caret-down")
@@ -16,3 +17,5 @@ lis.forEach((li) => {
         dropdown_activator.addEventListener("click", () => open_dropdown(li, chevron))
     }
 })
+
+console.log()

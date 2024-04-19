@@ -89,6 +89,7 @@ nav ul {
 nav ul li {
     position: relative;
     float: left;
+    padding: 8px 0;
 }
 
 nav ul li a {
@@ -114,7 +115,7 @@ nav ul li ul {
     left: 0;
     background: var(--nav-background);
     display: none;
-    top: 58px;
+    top: 66px;
 }
 
 nav ul li ul li {
@@ -138,11 +139,16 @@ nav ul li ul li ul {
     width: 25px;
     text-align: center;
     margin-top: 1rem;
-    border: 1px solid silver;
     border-radius: 6px;
 }
 nav ul li.open > ul {
     display: initial;
+}
+
+@media (min-width: 1201px) {
+    nav ul li:hover > ul {
+        display: initial;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -184,6 +190,7 @@ nav ul li.open > ul {
         width: 100%;
         text-align: center;
     }
+
     nav ul li:has(ul) a {
         margin-left: 50px;
     }
@@ -192,7 +199,7 @@ nav ul li.open > ul {
         border: 1px solid silver;
         width: 50px;
         padding: 0.8rem 0;
-        margin-top: 0.4rem;
+        margin-top: 0.1rem;
         text-align: center;
         cursor: pointer;
     }
